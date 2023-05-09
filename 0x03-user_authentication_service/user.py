@@ -1,19 +1,14 @@
 #!/usr/bin/env python3
-"""
-User file
-"""
+""" User model class."""
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
+
 
 Base = declarative_base()
 
 
 class User(Base):
-    """User db
-
-    Args:
-        Base (_type_): _description_
-    """
+    """ Implements the database table."""
     __tablename__ = 'users'
 
     id = Column(Integer, primary_key=True)
